@@ -35,9 +35,7 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais da plataforma',
-                items: await basicFetch(
-                    `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KET}`
-                )/*?with_network=213 para chamar somente o catalogo da netflix */
+                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KET}`)/*?with_network=213 para chamar somente o catalogo da netflix */
             },
             {
                 slug: 'trending',
@@ -47,7 +45,7 @@ export default {
             {
                 slug: 'toprated',
                 title: 'Mais populares',
-                items: await basicFetch(`movie/top_rated?language=pt-BR&api_key=${API_KET}`)
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KET}`)
             },
             {
                 slug: 'action',
