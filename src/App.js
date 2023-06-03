@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ApiFilm from './ApiFilm.js';
+import MovieCarousel from './components/MovieCarousel.js';
 
 
 function App() {
@@ -19,8 +20,18 @@ function App() {
 
 
   return (
-    <div className="App">
-      
+    <div>
+      <section>
+        {movieList.map((item, key) => {
+          return (
+            <MovieCarousel
+              key={key}
+              title={item.title}
+              items={item.items}
+            />
+          )
+        })}
+      </section>
     </div>
   );
 }
