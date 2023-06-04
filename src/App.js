@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ApiFilm from './ApiFilm.js';
 import MovieCarousel from './components/MovieCarousel.js';
+import DarkMode from './components/DarkMode.js';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div>
+      <DarkMode />
       <section>
         {movieList.map((item, key) => {
           return (
