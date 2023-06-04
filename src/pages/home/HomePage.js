@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import ApiFilm from '../../ApiFilm'
-import MovieCarousel from '../../components/MovieCarousel';
 import DarkMode from '../../components/DarkMode';
+import MovieRow from '../../components/MovieRow';
 
 
 function HomePage() {
@@ -26,7 +26,7 @@ function HomePage() {
       <section>
         {movieList.map((item, key) => {
           return (
-            <MovieCarousel
+            <MovieRow
               key={key}
               title={item.title}
               items={item.items}
